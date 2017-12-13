@@ -15,7 +15,7 @@ extension Bundle {
     
     static func sbResourceBundle() -> Bundle {
         let bundleResourcePath = Bundle.sbBundle().resourcePath
-        let assetPath = bundleResourcePath?.appending("/SendBird-iOS.bundle")
+        let assetPath = bundleResourcePath?.appending("/SouthKern-iOS.bundle")
         return Bundle(path: assetPath!)!
     }
     

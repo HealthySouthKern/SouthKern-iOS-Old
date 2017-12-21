@@ -10,6 +10,9 @@ import UIKit
 import SendBirdSDK
 
 class ViewController: UITableViewController, UITextFieldDelegate {
+    
+    
+    // MARK:
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var userIdLabel: UILabel!
     @IBOutlet weak var nicknameLabel: UILabel!
@@ -26,6 +29,17 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        displayVersion()
+        configureView()
+        //autoConnect()
+        
+    }
+
+    @IBAction func clickConnectButton(_ sender: AnyObject) {
+        self.connect()
+    }
+    
+    func displayVersion(){
         // Version
         let path = Bundle.main.path(forResource: "Info", ofType: "plist")
         if path != nil {
@@ -34,27 +48,33 @@ class ViewController: UITableViewController, UITextFieldDelegate {
             let version = String(format: "Sample UI v%@ / SDK v%@", sampleUIVersion, SBDMain.getSDKVersion())
             self.versionLabel.text = version
         }
-        
+    }
+    
+    func configureView(){
+        // Setup Delegates for TextFields
         self.userIdTextField.delegate = self
         self.nicknameTextField.delegate = self
         
         self.userIdLabel.alpha = 0
         self.nicknameLabel.alpha = 0
-        
+    }
+    
+    func autoConnect(){
+        // Saved user settings
         let userId = UserDefaults.standard.object(forKey: "sendbird_user_id") as? String
         let userNickname = UserDefaults.standard.object(forKey: "sendbird_user_nickname") as? String
         
         self.userIdLineView.backgroundColor = Constants.textFieldLineColorNormal()
         self.nicknameLineView.backgroundColor = Constants.textFieldLineColorNormal()
         
-        if userId != nil && (userId?.characters.count)! > 0 {
+        if userId != nil && (userId?.count)! > 0 {
             self.userIdLabelBottomMargin.constant = 0
             self.view.setNeedsUpdateConstraints()
             self.userIdLabel.alpha = 1
             self.view.layoutIfNeeded()
         }
         
-        if userNickname != nil && (userNickname?.characters.count)! > 0 {
+        if userNickname != nil && (userNickname?.count)! > 0 {
             self.nicknameLabelBottomMargin.constant = 0
             self.view.setNeedsUpdateConstraints()
             self.nicknameLabel.alpha = 1
@@ -71,19 +91,16 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         self.userIdTextField.addTarget(self, action: #selector(userIdTextFieldDidChange(sender:)), for: UIControlEvents.editingChanged)
         self.nicknameTextField.addTarget(self, action: #selector(nicknameTextFieldDidChange(sender:)), for: UIControlEvents.editingChanged)
         
-        if userId != nil && (userId?.characters.count)! > 0 && userNickname != nil && (userNickname?.characters.count)! > 0 {
+        if userId != nil && (userId?.count)! > 0 && userNickname != nil && (userNickname?.count)! > 0 {
             self.connect()
         }
     }
-
-    @IBAction func clickConnectButton(_ sender: AnyObject) {
-        self.connect()
-    }
+    
     
     func connect() {
         let trimmedUserId: String = (self.userIdTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces))!
         let trimmedNickname: String = (self.nicknameTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces))!
-        if trimmedUserId.characters.count > 0 && trimmedNickname.characters.count > 0 {
+        if trimmedUserId.count > 0 && trimmedNickname.count > 0 {
             self.userIdTextField.isEnabled = false
             self.nicknameTextField.isEnabled = false
             
@@ -160,7 +177,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     }
 
     func userIdTextFieldDidChange(sender: UITextField) {
-        if sender.text?.characters.count == 0 {
+        if sender.text?.count == 0 {
             self.userIdLabelBottomMargin.constant = -12
             self.view.setNeedsUpdateConstraints()
             UIView.animate(withDuration: 0.1, animations: { 
@@ -179,7 +196,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func nicknameTextFieldDidChange(sender: UITextField) {
-        if sender.text?.characters.count == 0 {
+        if sender.text?.count == 0 {
             self.nicknameLabelBottomMargin.constant = -12
             self.view.setNeedsUpdateConstraints()
             UIView.animate(withDuration: 0.1, animations: {

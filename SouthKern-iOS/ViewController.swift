@@ -8,12 +8,24 @@
 
 import UIKit
 import SendBirdSDK
+import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
 
 class ViewController: UITableViewController, UITextFieldDelegate {
     
+    // MARK: Properties
+    var user: User?
+    var displayName = "Anonymous"
     
-    // MARK:
+    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+    
+    // MARK: Outlets
     @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
+    
+    //Sample UI
     @IBOutlet weak var userIdLabel: UILabel!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var userIdTextField: UITextField!
@@ -23,6 +35,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var versionLabel: UILabel!
     
+    //Sample UI
     @IBOutlet weak var userIdLabelBottomMargin: NSLayoutConstraint!
     @IBOutlet weak var nicknameLabelBottomMargin: NSLayoutConstraint!
 
@@ -32,6 +45,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         displayVersion()
         configureView()
         //autoConnect()
+        configureAuth()
         
     }
 
@@ -63,7 +77,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func autoConnect(){
-        // Saved user settings
+        // Check Saved user settings
         let userId = UserDefaults.standard.object(forKey: "sendbird_user_id") as? String
         let userNickname = UserDefaults.standard.object(forKey: "sendbird_user_nickname") as? String
         
@@ -97,8 +111,58 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    // MARK: Config
     
+    func configureAuth() {
+        let provider: [FUIAuthProvider] = [FUIGoogleAuth()]
+        FUIAuth.defaultAuthUI()?.providers = provider
+        
+        // listen for changes in the authorization state
+        _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
+            // Do the Dew
+            
+            // check if there is a current user
+            if let activeUser = user {
+                // check if the current app user is the current FIRUser
+                if self.user != activeUser {
+                    self.user = activeUser
+                    self.signedInStatus(isSignedIn: true)
+                    // let name = user!.email!.components(separatedBy: "@")[0]
+                    self.userIdTextField.text = user!.email
+                    self.nicknameTextField.text = user!.displayName
+                    
+                }
+            } else {
+                // user must sign in
+                self.signedInStatus(isSignedIn: false)
+                self.loginSession()
+            }
+        }
+    }
     
+    deinit {
+        Auth.auth().removeStateDidChangeListener(_authHandle)
+    }
+    
+    // MARK: Sign In and Out
+    
+    func signedInStatus(isSignedIn: Bool) {
+        //connectButton.isHidden = isSignedIn
+        //connectButton.isHidden = !isSignedIn
+        signOutButton.isHidden = !isSignedIn
+       
+        if isSignedIn {
+            // remove background blur (will use when showing image messages)
+            //Configure Stuff
+        }
+    }
+    
+    func loginSession() {
+        let authViewController = FUIAuth.defaultAuthUI()!.authViewController()
+        present(authViewController, animated: true, completion: nil)
+    }
+    
+    // MARK: Connect to Sendbird
     func connect() {
         let trimmedUserId: String = (self.userIdTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces))!
         let trimmedNickname: String = (self.nicknameTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces))!
@@ -166,6 +230,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
                         return
                     }
                     
+                    // Sets UserDefaults
                     UserDefaults.standard.set(SBDMain.getCurrentUser()?.userId, forKey: "sendbird_user_id")
                     UserDefaults.standard.set(SBDMain.getCurrentUser()?.nickname, forKey: "sendbird_user_nickname")
                 })
@@ -175,6 +240,20 @@ class ViewController: UITableViewController, UITextFieldDelegate {
                     self.present(vc, animated: false, completion: nil)
                 }
             })
+        }
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func showLoginView(_ sender: AnyObject) {
+        loginSession()
+    }
+    
+    @IBAction func signOut(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("unable to sign out: \(error)")
         }
     }
 

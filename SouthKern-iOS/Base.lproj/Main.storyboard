@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -40,10 +41,19 @@
                                                         <constraint firstAttribute="height" constant="212" id="bC6-81-TrT"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKN-tg-Uzf" userLabel="Sign out Button">
+                                                    <rect key="frame" x="302" y="11" width="57" height="30"/>
+                                                    <state key="normal" title="Sign out"/>
+                                                    <connections>
+                                                        <action selector="signOut:" destination="Kza-7N-DeY" eventType="touchUpInside" id="CPp-lN-TGb"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="8eR-YM-EkE" secondAttribute="bottom" id="FDY-jV-7u7"/>
+                                                <constraint firstItem="SKN-tg-Uzf" firstAttribute="top" secondItem="U9Y-8G-Iyb" secondAttribute="topMargin" id="MCj-K6-DT5"/>
                                                 <constraint firstItem="8eR-YM-EkE" firstAttribute="centerX" secondItem="U9Y-8G-Iyb" secondAttribute="centerX" id="Tzm-A8-gTr"/>
+                                                <constraint firstItem="SKN-tg-Uzf" firstAttribute="trailing" secondItem="U9Y-8G-Iyb" secondAttribute="trailingMargin" id="jUD-Ya-TBp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -210,6 +220,7 @@
                         <outlet property="nicknameLabelBottomMargin" destination="yXV-I6-FV7" id="waa-EJ-CVo"/>
                         <outlet property="nicknameLineView" destination="y2P-Lh-zUy" id="mxD-1I-K6x"/>
                         <outlet property="nicknameTextField" destination="z8B-cw-1yn" id="Ja0-0H-6F4"/>
+                        <outlet property="signOutButton" destination="SKN-tg-Uzf" id="YPE-Ls-OrU"/>
                         <outlet property="userIdLabel" destination="3Ox-ZU-YIa" id="Pdf-yo-3Lk"/>
                         <outlet property="userIdLabelBottomMargin" destination="oTx-zu-cDl" id="RVB-DS-W3t"/>
                         <outlet property="userIdLineView" destination="33c-nU-tir" id="mAg-Tu-nCU"/>
@@ -219,7 +230,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDh-dy-idG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="161"/>
+            <point key="canvasLocation" x="-418.39999999999998" y="160.56971514242881"/>
         </scene>
     </scenes>
     <resources>

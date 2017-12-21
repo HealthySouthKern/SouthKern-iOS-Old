@@ -15,4 +15,5 @@ target 'SouthKern-iOS' do
   pod 'TTTAttributedLabel'
   pod 'RSKImageCropper'
   pod 'Firebase/Core'
+  pod 'FirebaseUI'
 end

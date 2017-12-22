@@ -15,9 +15,11 @@ import FirebaseGoogleAuthUI
 class ViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: Properties
-    var user: User?
+    var authUser: User?
     var displayName = "Anonymous"
-    
+    var ref: DatabaseReference!
+    var sendbirdUser: SBDUser?
+    fileprivate var _refHandle: DatabaseHandle!
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
     
     // MARK: Outlets
@@ -46,10 +48,12 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         configureView()
         //autoConnect()
         configureAuth()
+        configureDatabase()
         
     }
 
     @IBAction func clickConnectButton(_ sender: AnyObject) {
+        self.checkActiveUser(user: authUser)
         self.connect()
     }
     
@@ -121,22 +125,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         _authHandle = Auth.auth().addStateDidChangeListener { (auth: Auth, user: User?) in
             // Do the Dew
             
-            // check if there is a current user
-            if let activeUser = user {
-                // check if the current app user is the current FIRUser
-                if self.user != activeUser {
-                    self.user = activeUser
-                    self.signedInStatus(isSignedIn: true)
-                    // let name = user!.email!.components(separatedBy: "@")[0]
-                    self.userIdTextField.text = user!.email
-                    self.nicknameTextField.text = user!.displayName
-                    
-                }
-            } else {
-                // user must sign in
-                self.signedInStatus(isSignedIn: false)
-                self.loginSession()
-            }
+            self.checkActiveUser(user: user)
         }
     }
     
@@ -162,17 +151,45 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         present(authViewController, animated: true, completion: nil)
     }
     
+    // MARK: Configure Database
+    func configureDatabase(){
+        ref = Database.database().reference()
+        // listen for new messages in the firebase database
+      
+    }
+    
+    // MARK: isActiveUser
+    func checkActiveUser(user: User?){
+        // check if there is a current user
+        if let activeUser = user {
+            // check if the current app user is the current FIRUser
+            if self.authUser != activeUser {
+                self.authUser = activeUser
+                self.signedInStatus(isSignedIn: true)
+                // let name = user!.email!.components(separatedBy: "@")[0]
+                self.userIdTextField.text = user!.email
+                self.nicknameTextField.text = user!.displayName
+                
+            }
+        } else {
+            // user must sign in
+            self.signedInStatus(isSignedIn: false)
+            self.loginSession()
+        }
+    }
+    
     // MARK: Connect to Sendbird
     func connect() {
-        let trimmedUserId: String = (self.userIdTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces))!
-        let trimmedNickname: String = (self.nicknameTextField.text?.trimmingCharacters(in: NSCharacterSet.whitespaces))!
-        if trimmedUserId.count > 0 && trimmedNickname.count > 0 {
-            self.userIdTextField.isEnabled = false
-            self.nicknameTextField.isEnabled = false
-            
-            self.indicatorView.startAnimating()
-            
-            SBDMain.connect(withUserId: trimmedUserId, completionHandler: { (user, error) in
+        
+        self.userIdTextField.isEnabled = false
+        self.nicknameTextField.isEnabled = false
+        
+        self.indicatorView.startAnimating()
+        
+        let uuid = authUser?.uid
+        let sendBirdToken = getSendBirdToken(uuid: uuid!)
+        
+        SBDMain.connect(withUserId: (self.authUser?.email!)!,  accessToken: sendBirdToken, completionHandler: { (user, error) in
                 if error != nil {
                     DispatchQueue.main.async {
                         self.userIdTextField.isEnabled = true
@@ -206,8 +223,8 @@ class ViewController: UITableViewController, UITextFieldDelegate {
                         }
                     })
                 }
-                
-                SBDMain.updateCurrentUserInfo(withNickname: trimmedNickname, profileUrl: nil, completionHandler: { (error) in
+            
+            SBDMain.updateCurrentUserInfo(withNickname: self.authUser?.displayName, profileUrl: nil, completionHandler: { (error) in
                     DispatchQueue.main.async {
                         self.userIdTextField.isEnabled = true
                         self.nicknameTextField.isEnabled = true
@@ -215,6 +232,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
                         self.indicatorView.stopAnimating()
                     }
                     
+                    // Something Broke
                     if error != nil {
                         let vc = UIAlertController(title: Bundle.sbLocalizedStringForKey(key: "ErrorTitle"), message: error?.domain, preferredStyle: UIAlertControllerStyle.alert)
                         let closeAction = UIAlertAction(title: Bundle.sbLocalizedStringForKey(key: "CloseButton"), style: UIAlertActionStyle.cancel, handler: nil)
@@ -230,9 +248,11 @@ class ViewController: UITableViewController, UITextFieldDelegate {
                         return
                     }
                     
+                    //Nothing failed Get
+                    self.sendbirdUser = SBDMain.getCurrentUser()
                     // Sets UserDefaults
-                    UserDefaults.standard.set(SBDMain.getCurrentUser()?.userId, forKey: "sendbird_user_id")
-                    UserDefaults.standard.set(SBDMain.getCurrentUser()?.nickname, forKey: "sendbird_user_nickname")
+                    UserDefaults.standard.set(self.sendbirdUser?.userId, forKey: "sendbird_user_id")
+                    UserDefaults.standard.set(self.sendbirdUser?.nickname, forKey: "sendbird_user_nickname")
                 })
                 
                 DispatchQueue.main.async {
@@ -240,7 +260,12 @@ class ViewController: UITableViewController, UITextFieldDelegate {
                     self.present(vc, animated: false, completion: nil)
                 }
             })
-        }
+        
+    }
+    
+    func getSendBirdToken(uuid: String) -> String{
+        print(uuid)
+        return ""
     }
     
     // MARK: Actions
@@ -250,7 +275,12 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func signOut(_ sender: UIButton) {
+        
+        self.userIdTextField.text = ""
+        self.nicknameTextField.text = ""
+        
         do {
+            
             try Auth.auth().signOut()
         } catch {
             print("unable to sign out: \(error)")

@@ -73,8 +73,8 @@
 		5ADEF82A1DAA663C000AABF9 /* CreateGroupChannelUserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEF8291DAA663C000AABF9 /* CreateGroupChannelUserListTableViewCell.swift */; };
 		5ADEF82C1DAA67C5000AABF9 /* GroupChannelListEditableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEF82B1DAA67C5000AABF9 /* GroupChannelListEditableTableViewCell.swift */; };
 		74724329DD10AB6B1FE5614A /* Pods_SouthKern_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715978C226EA5A0AE2D5FD02 /* Pods_SouthKern_iOS.framework */; };
-		801E26E220753CA6002124E6 /* BHC_Logo_Color_Centered.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E26E120753CA6002124E6 /* BHC_Logo_Color_Centered.png */; };
-		803A315320794E0F00C68263 /* BHCLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 803A314B20794E0F00C68263 /* BHCLOGO.png */; };
+		8027763E20796E6E00395816 /* SouthKern-iOS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8027763620796E6D00395816 /* SouthKern-iOS.ttf */; };
+		80FB329C2079629B00AD4680 /* BHCLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FB329B2079629B00AD4680 /* BHCLOGO.png */; };
 		CCB2985C1FDE5ABC00A029A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB2985B1FDE5ABC00A029A3 /* GoogleService-Info.plist */; };
 		CE806EF61E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE806EF41E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.swift */; };
 		CE806EF71E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE806EF51E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.xib */; };
@@ -256,8 +256,8 @@
 		5ADEF8291DAA663C000AABF9 /* CreateGroupChannelUserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupChannelUserListTableViewCell.swift; sourceTree = "<group>"; };
 		5ADEF82B1DAA67C5000AABF9 /* GroupChannelListEditableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupChannelListEditableTableViewCell.swift; sourceTree = "<group>"; };
 		715978C226EA5A0AE2D5FD02 /* Pods_SouthKern_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthKern_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		801E26E120753CA6002124E6 /* BHC_Logo_Color_Centered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BHC_Logo_Color_Centered.png; path = ../../BHC_Logo_Color/BHC_Logo_Color_Centered.png; sourceTree = "<group>"; };
-		803A314B20794E0F00C68263 /* BHCLOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BHCLOGO.png; path = ../../../BHCLOGO.png; sourceTree = "<group>"; };
+		8027763620796E6D00395816 /* SouthKern-iOS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SouthKern-iOS.ttf"; path = "Assets.xcassets/SouthKern-iOS.ttf"; sourceTree = "<group>"; };
+		80FB329B2079629B00AD4680 /* BHCLOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BHCLOGO.png; path = "SouthKern-iOS/Assets.xcassets/BHCLOGO.png"; sourceTree = "<group>"; };
 		CCB2985B1FDE5ABC00A029A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CE806EF41E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingVideoFileMessageTableViewCell.swift; sourceTree = "<group>"; };
 		CE806EF51E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingVideoFileMessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -311,6 +311,7 @@
 		5ABA0B741DA6010A000C82DC = {
 			isa = PBXGroup;
 			children = (
+				80FB329B2079629B00AD4680 /* BHCLOGO.png */,
 				E2217E391EF893A000AEE668 /* CommonCrypto */,
 				87F030833FB4898AD40CBE66 /* Frameworks */,
 				5ABA0B7E1DA6010A000C82DC /* Products */,
@@ -345,11 +346,10 @@
 				E2332F841EFB183300E0738B /* UserProfile */,
 				5ABA0B801DA6010A000C82DC /* AppDelegate.swift */,
 				5ABA0B871DA6010A000C82DC /* Assets.xcassets */,
+				8027763620796E6D00395816 /* SouthKern-iOS.ttf */,
 				5ABA0B8C1DA6010A000C82DC /* Info.plist */,
 				CCB2985B1FDE5ABC00A029A3 /* GoogleService-Info.plist */,
 				5ABA0B891DA6010A000C82DC /* LaunchScreen.storyboard */,
-				803A314B20794E0F00C68263 /* BHCLOGO.png */,
-				801E26E120753CA6002124E6 /* BHC_Logo_Color_Centered.png */,
 				5AD94BC81DB0B6F200A6CD66 /* Main.storyboard */,
 				5ABA0B821DA6010A000C82DC /* ViewController.swift */,
 			);
@@ -628,6 +628,7 @@
 				TargetAttributes = {
 					5ABA0B7C1DA6010A000C82DC = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3ZY2US6V5U;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -725,6 +726,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FB329C2079629B00AD4680 /* BHCLOGO.png in Resources */,
 				5AC2B6DB1DB6108300BA4BC7 /* CreateGroupChannelSelectOptionViewController.xib in Resources */,
 				5ABA0B8B1DA6010A000C82DC /* LaunchScreen.storyboard in Resources */,
 				CE806EFB1E79049800A8CB57 /* OutgoingVideoFileMessageTableViewCell.xib in Resources */,
@@ -737,7 +739,6 @@
 				5ADEF81C1DAA616A000AABF9 /* GroupChannelListTableViewCell.xib in Resources */,
 				5AC2B7031DB62C2600BA4BC7 /* BlockedUserListViewController.xib in Resources */,
 				CCB2985C1FDE5ABC00A029A3 /* GoogleService-Info.plist in Resources */,
-				803A315320794E0F00C68263 /* BHCLOGO.png in Resources */,
 				5AD94BB61DAF220100A6CD66 /* OpenChannelListTableViewCell.xib in Resources */,
 				5AC2B6EF1DB61C3300BA4BC7 /* MenuViewController.xib in Resources */,
 				5ABA0BC41DA62094000C82DC /* OutgoingFileMessageTableViewCell.xib in Resources */,
@@ -757,9 +758,9 @@
 				5AC2B6F41DB6287100BA4BC7 /* CreateOpenChannelViewController.xib in Resources */,
 				5AC2B6FE1DB62C0D00BA4BC7 /* ParticipantListViewController.xib in Resources */,
 				5AD94C281DB5F6B500A6CD66 /* SouthKern-iOS.bundle in Resources */,
+				8027763E20796E6E00395816 /* SouthKern-iOS.ttf in Resources */,
 				5ABA0BC61DA62094000C82DC /* OutgoingUserMessageTableViewCell.xib in Resources */,
 				5ABA0BC01DA62094000C82DC /* IncomingFileMessageTableViewCell.xib in Resources */,
-				801E26E220753CA6002124E6 /* BHC_Logo_Color_Centered.png in Resources */,
 				5ADEF8261DAA617D000AABF9 /* GroupChannelChattingViewController.xib in Resources */,
 				5AD94BB51DAF220100A6CD66 /* BlockedUserListTableViewCell.xib in Resources */,
 				E290199E1EE77A6F00DA8AB8 /* IncomingGeneralUrlPreviewMessageTableViewCell.xib in Resources */,
@@ -1182,9 +1183,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SouthKern-iOS/SouthKern-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3ZY2US6V5U;
 				INFOPLIST_FILE = "$(SRCROOT)/SouthKern-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1202,9 +1204,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SouthKern-iOS/SouthKern-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3ZY2US6V5U;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "$(SRCROOT)/SouthKern-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

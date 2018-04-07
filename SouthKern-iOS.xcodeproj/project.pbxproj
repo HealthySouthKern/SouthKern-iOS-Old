@@ -72,6 +72,9 @@
 		5ADEF8261DAA617D000AABF9 /* GroupChannelChattingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEF8211DAA617D000AABF9 /* GroupChannelChattingViewController.xib */; };
 		5ADEF82A1DAA663C000AABF9 /* CreateGroupChannelUserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEF8291DAA663C000AABF9 /* CreateGroupChannelUserListTableViewCell.swift */; };
 		5ADEF82C1DAA67C5000AABF9 /* GroupChannelListEditableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEF82B1DAA67C5000AABF9 /* GroupChannelListEditableTableViewCell.swift */; };
+		74724329DD10AB6B1FE5614A /* Pods_SouthKern_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715978C226EA5A0AE2D5FD02 /* Pods_SouthKern_iOS.framework */; };
+		8027763E20796E6E00395816 /* SouthKern-iOS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8027763620796E6D00395816 /* SouthKern-iOS.ttf */; };
+		80FB329C2079629B00AD4680 /* BHCLOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 80FB329B2079629B00AD4680 /* BHCLOGO.png */; };
 		CCB2985C1FDE5ABC00A029A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB2985B1FDE5ABC00A029A3 /* GoogleService-Info.plist */; };
 		CE806EF61E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE806EF41E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.swift */; };
 		CE806EF71E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE806EF51E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.xib */; };
@@ -94,7 +97,6 @@
 		E290199D1EE77A6F00DA8AB8 /* IncomingGeneralUrlPreviewMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290199B1EE77A6F00DA8AB8 /* IncomingGeneralUrlPreviewMessageTableViewCell.swift */; };
 		E290199E1EE77A6F00DA8AB8 /* IncomingGeneralUrlPreviewMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E290199C1EE77A6F00DA8AB8 /* IncomingGeneralUrlPreviewMessageTableViewCell.xib */; };
 		E29019A01EE8979C00DA8AB8 /* FLAnimatedImageView+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290199F1EE8979C00DA8AB8 /* FLAnimatedImageView+ImageCache.swift */; };
-		E89C79D2FDA7A194E4B849AD /* Pods_SouthKern_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06560625CD37BEE61F8C491A /* Pods_SouthKern_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,9 +174,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06560625CD37BEE61F8C491A /* Pods_SouthKern_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthKern_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CE2193ABD198D39DC2FB279 /* Pods-SouthKern-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		544A8AC308AABCCC3AEEE15F /* Pods-SouthKern-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		196A1BCA1F83F5488BD339A7 /* Pods-SouthKern-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		30181B860375F30C5400A1AA /* Pods-SouthKern-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SouthKern-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5A74B8EF1DC0D11D00EBA0F5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/GroupChannelListViewController.xib; sourceTree = "<group>"; };
 		5ABA0B7D1DA6010A000C82DC /* SouthKern-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SouthKern-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ABA0B801DA6010A000C82DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,7 +255,9 @@
 		5ADEF8211DAA617D000AABF9 /* GroupChannelChattingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupChannelChattingViewController.xib; sourceTree = "<group>"; };
 		5ADEF8291DAA663C000AABF9 /* CreateGroupChannelUserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupChannelUserListTableViewCell.swift; sourceTree = "<group>"; };
 		5ADEF82B1DAA67C5000AABF9 /* GroupChannelListEditableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupChannelListEditableTableViewCell.swift; sourceTree = "<group>"; };
-		8F3A2CB679067572774BDE5D /* Pods_SendBird_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SendBird_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		715978C226EA5A0AE2D5FD02 /* Pods_SouthKern_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SouthKern_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8027763620796E6D00395816 /* SouthKern-iOS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SouthKern-iOS.ttf"; path = "Assets.xcassets/SouthKern-iOS.ttf"; sourceTree = "<group>"; };
+		80FB329B2079629B00AD4680 /* BHCLOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BHCLOGO.png; path = "SouthKern-iOS/Assets.xcassets/BHCLOGO.png"; sourceTree = "<group>"; };
 		CCB2985B1FDE5ABC00A029A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CE806EF41E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomingVideoFileMessageTableViewCell.swift; sourceTree = "<group>"; };
 		CE806EF51E79048200A8CB57 /* IncomingVideoFileMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomingVideoFileMessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -291,7 +294,7 @@
 			files = (
 				E25E5A771E735BC8003E1E9B /* Photos.framework in Frameworks */,
 				E2217E4D1EF89A1700AEE668 /* CommonCrypto.framework in Frameworks */,
-				E89C79D2FDA7A194E4B849AD /* Pods_SouthKern_iOS.framework in Frameworks */,
+				74724329DD10AB6B1FE5614A /* Pods_SouthKern_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +311,15 @@
 		5ABA0B741DA6010A000C82DC = {
 			isa = PBXGroup;
 			children = (
+				80FB329B2079629B00AD4680 /* BHCLOGO.png */,
 				E2217E391EF893A000AEE668 /* CommonCrypto */,
 				87F030833FB4898AD40CBE66 /* Frameworks */,
-				B7DFF76D457E2AA72C07058C /* Pods */,
 				5ABA0B7E1DA6010A000C82DC /* Products */,
 				5ABA0B7F1DA6010A000C82DC /* SouthKern-iOS */,
 				E2217E491EF8974F00AEE668 /* CommonCrypto.xcconfig */,
 				E2332F6B1EF9D45F00E0738B /* HTMLKit.xcodeproj */,
 				5AD94C271DB5F6B500A6CD66 /* SouthKern-iOS.bundle */,
+				94C635253F5DF0D314703F5C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -342,6 +346,7 @@
 				E2332F841EFB183300E0738B /* UserProfile */,
 				5ABA0B801DA6010A000C82DC /* AppDelegate.swift */,
 				5ABA0B871DA6010A000C82DC /* Assets.xcassets */,
+				8027763620796E6D00395816 /* SouthKern-iOS.ttf */,
 				5ABA0B8C1DA6010A000C82DC /* Info.plist */,
 				CCB2985B1FDE5ABC00A029A3 /* GoogleService-Info.plist */,
 				5ABA0B891DA6010A000C82DC /* LaunchScreen.storyboard */,
@@ -494,17 +499,16 @@
 			isa = PBXGroup;
 			children = (
 				E25E5A761E735BC8003E1E9B /* Photos.framework */,
-				8F3A2CB679067572774BDE5D /* Pods_SendBird_iOS.framework */,
-				06560625CD37BEE61F8C491A /* Pods_SouthKern_iOS.framework */,
+				715978C226EA5A0AE2D5FD02 /* Pods_SouthKern_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B7DFF76D457E2AA72C07058C /* Pods */ = {
+		94C635253F5DF0D314703F5C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4CE2193ABD198D39DC2FB279 /* Pods-SouthKern-iOS.debug.xcconfig */,
-				544A8AC308AABCCC3AEEE15F /* Pods-SouthKern-iOS.release.xcconfig */,
+				30181B860375F30C5400A1AA /* Pods-SouthKern-iOS.debug.xcconfig */,
+				196A1BCA1F83F5488BD339A7 /* Pods-SouthKern-iOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -576,13 +580,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ABA0B8F1DA6010A000C82DC /* Build configuration list for PBXNativeTarget "SouthKern-iOS" */;
 			buildPhases = (
-				A0885E337A6E419ABA67A9A3 /* [CP] Check Pods Manifest.lock */,
+				52C53E2EA25D3CCDCCE40D0C /* [CP] Check Pods Manifest.lock */,
 				5ABA0B791DA6010A000C82DC /* Sources */,
 				5ABA0B7A1DA6010A000C82DC /* Frameworks */,
 				5ABA0B7B1DA6010A000C82DC /* Resources */,
-				8C1E0916356E7246F394074F /* [CP] Embed Pods Frameworks */,
-				88618BF479B07A50BF60BDBE /* [CP] Copy Pods Resources */,
 				E2217E441EF893A000AEE668 /* Embed Frameworks */,
+				C527F8A9FBAA7D3D2A6C8F78 /* [CP] Embed Pods Frameworks */,
+				76F8C7BCADE71C2898F478AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -624,7 +628,7 @@
 				TargetAttributes = {
 					5ABA0B7C1DA6010A000C82DC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = S8MJ375S2L;
+						DevelopmentTeam = 3ZY2US6V5U;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -722,6 +726,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FB329C2079629B00AD4680 /* BHCLOGO.png in Resources */,
 				5AC2B6DB1DB6108300BA4BC7 /* CreateGroupChannelSelectOptionViewController.xib in Resources */,
 				5ABA0B8B1DA6010A000C82DC /* LaunchScreen.storyboard in Resources */,
 				CE806EFB1E79049800A8CB57 /* OutgoingVideoFileMessageTableViewCell.xib in Resources */,
@@ -753,6 +758,7 @@
 				5AC2B6F41DB6287100BA4BC7 /* CreateOpenChannelViewController.xib in Resources */,
 				5AC2B6FE1DB62C0D00BA4BC7 /* ParticipantListViewController.xib in Resources */,
 				5AD94C281DB5F6B500A6CD66 /* SouthKern-iOS.bundle in Resources */,
+				8027763E20796E6E00395816 /* SouthKern-iOS.ttf in Resources */,
 				5ABA0BC61DA62094000C82DC /* OutgoingUserMessageTableViewCell.xib in Resources */,
 				5ABA0BC01DA62094000C82DC /* IncomingFileMessageTableViewCell.xib in Resources */,
 				5ADEF8261DAA617D000AABF9 /* GroupChannelChattingViewController.xib in Resources */,
@@ -773,31 +779,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		88618BF479B07A50BF60BDBE /* [CP] Copy Pods Resources */ = {
+		52C53E2EA25D3CCDCCE40D0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SouthKern-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76F8C7BCADE71C2898F478AE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C1E0916356E7246F394074F /* [CP] Embed Pods Frameworks */ = {
+		C527F8A9FBAA7D3D2A6C8F78 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -818,6 +848,7 @@
 				"${BUILT_PRODUCTS_DIR}/RSKImageCropper/RSKImageCropper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework",
+				"${PODS_ROOT}/SendBirdSDK/SendBirdSDK.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -838,6 +869,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSKImageCropper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SendBirdSDK.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/SendBirdSDK.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -845,24 +877,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SouthKern-iOS/Pods-SouthKern-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0885E337A6E419ABA67A9A3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SouthKern-iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1164,14 +1178,15 @@
 		};
 		5ABA0B901DA6010A000C82DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CE2193ABD198D39DC2FB279 /* Pods-SouthKern-iOS.debug.xcconfig */;
+			baseConfigurationReference = 30181B860375F30C5400A1AA /* Pods-SouthKern-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SouthKern-iOS/SouthKern-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S8MJ375S2L;
+				DEVELOPMENT_TEAM = 3ZY2US6V5U;
 				INFOPLIST_FILE = "$(SRCROOT)/SouthKern-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1184,14 +1199,15 @@
 		};
 		5ABA0B911DA6010A000C82DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 544A8AC308AABCCC3AEEE15F /* Pods-SouthKern-iOS.release.xcconfig */;
+			baseConfigurationReference = 196A1BCA1F83F5488BD339A7 /* Pods-SouthKern-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SouthKern-iOS/SouthKern-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S8MJ375S2L;
+				DEVELOPMENT_TEAM = 3ZY2US6V5U;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "$(SRCROOT)/SouthKern-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

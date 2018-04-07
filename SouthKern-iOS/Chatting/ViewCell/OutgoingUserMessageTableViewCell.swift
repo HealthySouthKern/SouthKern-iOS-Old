@@ -212,12 +212,16 @@ class OutgoingUserMessageTableViewCell: UITableViewCell {
         let fullMessage = self.buildMessage()
         var fullMessageSize: CGSize
         
-        let messageLabelMaxWidth = self.frame.size.width - (self.messageContainerRightMargin.constant + self.messageContainerRightPadding.constant + self.messageContainerLeftPadding.constant + self.messageContainerLeftMargin.constant + self.messageDateLabelLeftMargin.constant + self.messageDateLabelWidth.constant)
+        let messageLabelMaxWidthPt1 = (self.messageContainerRightMargin.constant + self.messageContainerRightPadding.constant + self.messageContainerLeftPadding.constant)
+        
+        let messageLabelMaxWidthPt2 = (self.messageDateLabelWidth.constant + self.messageDateLabelLeftMargin.constant + self.messageContainerLeftMargin.constant)
+
+        let messageLabelMaxWidthFinal = self.frame.size.width - (messageLabelMaxWidthPt1 + messageLabelMaxWidthPt2)
 
 //        fullMessageRect = fullMessage.boundingRect(with: CGSize.init(width: messageLabelMaxWidth, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
         
         let framesetter = CTFramesetterCreateWithAttributedString(fullMessage)
-        fullMessageSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRange(location: 0,length: 0), nil, CGSize(width: messageLabelMaxWidth, height: CGFloat(LONG_LONG_MAX)), nil)
+        fullMessageSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRange(location: 0,length: 0), nil, CGSize(width: messageLabelMaxWidthFinal, height: CGFloat(LONG_LONG_MAX)), nil)
         
         let cellHeight = self.dateContainerTopMargin.constant + self.dateContainerHeight.constant + self.dateContainerBottomMargin.constant + self.messageContainerTopPadding.constant + fullMessageSize.height + self.messageContainerBottomPadding.constant
         
